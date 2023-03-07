@@ -9,16 +9,21 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <vector>
 #include <boost/array.hpp>
 #include <boost/asio.hpp>
 
 using boost::asio::ip::tcp;
 
-constexpr size_t image_size = 100*100;
+constexpr size_t image_size = 17618 //This is the size of the image file in bytes and had to change it to get a proper image.
 
-void save_image(char* data, size_t len)
+void save_image(char* data, size_t len) 
+//This stores the recieved bytes as an image file and should be called "copy" and then the name of the image file. 
+//If the filed is called cat.jpg then the file should be called copycat.jpg
 {
-  // TODO
+  std::ofstream file("copycat.jpg", std::ios::binary);
+  file.write(data, len);
 }
 
 int main(int argc, char* argv[])
