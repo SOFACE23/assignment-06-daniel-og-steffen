@@ -21,7 +21,6 @@ set(CMAKE_CXX_STANDARD 14)
 #   --error-exitcode=1;
 # )
 
-
 find_package(Boost REQUIRED COMPONENTS thread system)
 include_directories(${Boost_INCLUDE_DIRS})
 
