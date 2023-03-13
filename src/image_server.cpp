@@ -19,9 +19,8 @@ using boost::asio::ip::tcp;
 
 std::vector<uint8_t> get_image() //load the content from a file and return it as a vector of bytes
 //In this instance it should take the cat.jpg file and return it as a vector of bytes
-ttypedef unsigned char BYTE;
 
-std::vector<BYTE> readFile(const char* filename)
+std::vector<BYTE> get_image(const char* filename)
 {
     // open the file:
     std::streampos fileSize;
